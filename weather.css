@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(30, 30, 123);
+}
+
+#water-wave .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(/Notes/wave.png);
+    background-size: 1000px 100px;
+}
+
+@keyframes animate1 {
+    0% {
+        background-position-x: 00px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+#water-wave .wave1 {
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+    animation: animate1 20s linear infinite;
+}
+
+@keyframes animate2 {
+    0% {
+        background-position-x: -1000px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+#water-wave .wave2 {
+    z-index: 999;
+    opacity: 0.3;
+    animation-delay: -5s;
+    bottom: 20px;
+    animation: animate2 25s linear 4s infinite;
+}
+
+@keyframes animate3 {
+    0% {
+        background-position-x: 50px;
+    }
+    100% {
+        background-position-x: 500px;
+    }
+}
+
+#water-wave .wave3 {
+    z-index: 998;
+    opacity: 0.8;
+    animation-delay: 1s;
+    bottom: 30px;
+    animation: animate2 10s linear infinite;
+}
+
+@keyframes animate4 {
+    0% {
+        background-position-x: 100px;
+    }
+    100% {
+        background-position-x: 900px;
+    }
+}
+
+#water-wave .wave4 {
+    z-index: 997;
+    opacity: 0.5;
+    animation-delay: 1s;
+    bottom: 50px;
+    animation: animate2 15s linear infinite alternate;
+}
+
+#layout {
+    margin: auto;
+    margin-top: 10vh;
+    position: relative;
+    width: 50vh;
+    height: 70vh;
+    background-color: rgb(24, 6, 116);
+    display: flex;
+    flex-direction: column;
+}
+
+#sun {
+    background: transparent;
+    position: absolute;
+    color: wheat;
+    /* margin-top: 10vh; */
+    margin: 10vh 20vh;
+}
+
+#city {
+    margin:auto;
+    /* margin-top: 20vh; */
+    color: wheat;
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+#address {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+#date-time {
+    font-size: 1rem;
+    margin-top: 1vh;
+    margin-left: 5vh;
+}
+
+#address i {
+    margin-right: 1vh;
+    animation: animate 1.5s linear 0s infinite alternate ;
+}
+@keyframes animate {
+    0% { transform: translateX(-1vh);}
+    100% { transform: translateX(1vh);}
+}
+
+#temperature {
+    margin: auto;
+    margin-top: -18vh;
+    color: wheat;
+}
+
+#currtemp {
+    margin-left: 2vh;
+    /* margin-bottom: -10vh; */
+}
+#max-min {
+    margin-top: -3vh;
+}
